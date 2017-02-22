@@ -2,16 +2,25 @@
 <html lang="en">
 <header>
     <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">My Routing App</a>
+            </div>
 
-        <div class="navbar-header">
-            <a href="" class="navbar-brand">My Angular 2 App!</a>
+            <ul class="nav navbar-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
     </nav>
 </header>
 
 <main>
 
-    <div class="row">
+    <router-outlet></router-outlet>
+
+    <!--<div class="row">
         <div class="col-sm-12">
 
             <div class="jumbotron">
@@ -20,8 +29,14 @@
                 <p>{{ message }}</p>
             </div>
 
+            <home-page></home-page>
+
+            <about-page></about-page>
+
+            <contact-page></contact-page>
+
         </div>
-    </div>
+    </div>-->
 
 
 </main>

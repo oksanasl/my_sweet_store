@@ -1,4 +1,8 @@
-.jumbotron .glyphicon {
-    font-size: 80px;
-    color: red;
+.jumbotron{
+    text-align: center;
 }
+
+.jumbotron .glyphicon {
+     font-size: 80px;
+     color: red;
+ }
