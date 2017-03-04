@@ -6,22 +6,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var HomeComponent = (function () {
-    function HomeComponent() {
+var NotFoundComponent = (function () {
+    function NotFoundComponent() {
     }
-    return HomeComponent;
+    return NotFoundComponent;
 }());
-HomeComponent = __decorate([
+NotFoundComponent = __decorate([
     core_1.Component({
-        selector: 'home-page',
-        // template: `
-        // i am the home page
-        // `
-        templateUrl: './app/home/template.html'
+        template: "\n<div class=\"jumbotron text-center\">\n<h1>404 Not Found</h1>\n<p>You may be lost. Follow the breadcrumbs back <a routerLink=\"/\">home</a>.</p>\n</div>\n"
     })
-], HomeComponent);
-exports.HomeComponent = HomeComponent;
+], NotFoundComponent);
+exports.NotFoundComponent = NotFoundComponent;
 /**
- * Created by Окси on 21.02.2017.
+ * Created by Окси on 22.02.2017.
  */
-//# sourceMappingURL=home.component.js.map
+//# sourceMappingURL=not-found.component.js.map

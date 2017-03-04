@@ -1,8 +1,3 @@
-.jumbotron{
-    text-align: center;
+.active{
+    color: red !important;
 }
-
-.jumbotron .glyphicon {
-     font-size: 80px;
-     color: red;
- }

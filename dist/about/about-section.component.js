@@ -6,22 +6,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var HomeComponent = (function () {
-    function HomeComponent() {
+var AboutSectionComponent = (function () {
+    function AboutSectionComponent() {
     }
-    return HomeComponent;
+    return AboutSectionComponent;
 }());
-HomeComponent = __decorate([
+AboutSectionComponent = __decorate([
     core_1.Component({
-        selector: 'home-page',
-        // template: `
-        // i am the home page
-        // `
-        templateUrl: './app/home/template.html'
+        template: "\n        <h2 class=\"text-center\">About Section</h2>\n\n        <router-outlet></router-outlet>\n    "
     })
-], HomeComponent);
-exports.HomeComponent = HomeComponent;
+], AboutSectionComponent);
+exports.AboutSectionComponent = AboutSectionComponent;
 /**
- * Created by Окси on 21.02.2017.
+ * Created by Окси on 26.02.2017.
  */
-//# sourceMappingURL=home.component.js.map
+//# sourceMappingURL=about-section.component.js.map
