@@ -27,6 +27,11 @@ const PRODUCTS: Product[] = [
 export class HomeComponent {
     title: string = 'Our products';
     products = PRODUCTS;
+    selectedProduct: Product;
+
+    onSelect(product: Product): void {
+        this.selectedProduct = product;
+    }
 }
 
 
