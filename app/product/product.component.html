@@ -1,3 +1,7 @@
 <main class="container">
-    <p>{{ message }}</p>
+    <div *ngIf="product">
+        <h2>{{product.name}}</h2>
+        <div><label>id: </label> {{product.id}}</div>
+        <div><label>name: </label> {{product.name}}</div>
+    </div>
 </main>

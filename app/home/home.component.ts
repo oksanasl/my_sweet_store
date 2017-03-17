@@ -1,21 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import { Product } from '../shared/models/product';
+import { ProductService } from '../shared/services/product.service';
 
-export class Product {
-    id: number;
-    name: string;
-}
-
-const PRODUCTS: Product[] = [
-    { id: 1, name: 'Avocado' },
-    { id: 2, name: 'Pineapple' },
-    { id: 3, name: 'Pear' },
-    { id: 4, name: 'Mango' },
-    { id: 5, name: 'Coconut' },
-    { id: 6, name: 'Pomegranate' },
-    { id: 7, name: 'Fig' },
-    { id: 8, name: 'Kiwi' },
-    { id: 9, name: 'Persimmon' }
-];
 
 @Component({
     selector: 'home-page',
@@ -24,10 +10,19 @@ const PRODUCTS: Product[] = [
 })
 
 
-export class HomeComponent {
+export class HomeComponent implements OnInit{
     title: string = 'Our products';
-    products = PRODUCTS;
+    products: Product[];
     selectedProduct: Product;
+
+    constructor(private productService: ProductService) { }
+
+    getProducts(): void {
+        this.productService.getProducts().then(products => this.products = products);
+    }
+    ngOnInit(): void {
+        this.getProducts();
+    }
 
     onSelect(product: Product): void {
         this.selectedProduct = product;

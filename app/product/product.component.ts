@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Product } from '../shared/models/product';
+
 
 @Component({
-    selector: 'product-page',
+    selector: 'product-detail',
     templateUrl: './app/product/product.component.html',
     styleUrls: ['./app/product/product.component.css']
 })
 
 
 export class ProductComponent {
-    message: string = 'I am Your Product';
-
+    @Input()
+    product: Product;
 }
 
 /**

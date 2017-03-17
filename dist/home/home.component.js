@@ -5,30 +5,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var Product = (function () {
-    function Product() {
-    }
-    return Product;
-}());
-exports.Product = Product;
-var PRODUCTS = [
-    { id: 1, name: 'Avocado' },
-    { id: 2, name: 'Pineapple' },
-    { id: 3, name: 'Pear' },
-    { id: 4, name: 'Mango' },
-    { id: 5, name: 'Coconut' },
-    { id: 6, name: 'Pomegranate' },
-    { id: 7, name: 'Fig' },
-    { id: 8, name: 'Kiwi' },
-    { id: 9, name: 'Persimmon' }
-];
+var product_service_1 = require("../shared/services/product.service");
 var HomeComponent = (function () {
-    function HomeComponent() {
+    function HomeComponent(productService) {
+        this.productService = productService;
         this.title = 'Our products';
-        this.products = PRODUCTS;
     }
+    HomeComponent.prototype.getProducts = function () {
+        var _this = this;
+        this.productService.getProducts().then(function (products) { return _this.products = products; });
+    };
+    HomeComponent.prototype.ngOnInit = function () {
+        this.getProducts();
+    };
     HomeComponent.prototype.onSelect = function (product) {
         this.selectedProduct = product;
     };
@@ -39,7 +33,8 @@ HomeComponent = __decorate([
         selector: 'home-page',
         templateUrl: './app/home/home.component.html',
         styleUrls: ['./app/home/home.component.css']
-    })
+    }),
+    __metadata("design:paramtypes", [product_service_1.ProductService])
 ], HomeComponent);
 exports.HomeComponent = HomeComponent;
 /**
