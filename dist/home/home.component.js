@@ -10,9 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
 var product_service_1 = require("../shared/services/product.service");
 var HomeComponent = (function () {
-    function HomeComponent(productService) {
+    function HomeComponent(router, productService) {
+        this.router = router;
         this.productService = productService;
         this.title = 'Our products';
     }
@@ -26,6 +28,9 @@ var HomeComponent = (function () {
     HomeComponent.prototype.onSelect = function (product) {
         this.selectedProduct = product;
     };
+    HomeComponent.prototype.gotoProduct = function (product) {
+        this.router.navigate(['/product', this.selectedProduct.id]);
+    };
     return HomeComponent;
 }());
 HomeComponent = __decorate([
@@ -34,7 +39,8 @@ HomeComponent = __decorate([
         templateUrl: './app/home/home.component.html',
         styleUrls: ['./app/home/home.component.css']
     }),
-    __metadata("design:paramtypes", [product_service_1.ProductService])
+    __metadata("design:paramtypes", [router_1.Router,
+        product_service_1.ProductService])
 ], HomeComponent);
 exports.HomeComponent = HomeComponent;
 /**

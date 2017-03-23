@@ -1,7 +1,15 @@
-<main class="container">
-    <div *ngIf="product">
-        <h2>{{product.name}}</h2>
-        <div><label>id: </label> {{product.id}}</div>
-        <div><label>name: </label> {{product.name}}</div>
+<div *ngIf="selectedProduct">
+    <div class="col-sm-4" *ngFor="let product of products">
+        <h2>{{selectedProduct.name}}</h2>
+        <div><label>id: </label> {{selectedProduct.id}}</div>
+        <div><label>name: </label> {{selectedProduct.name}}</div>
+
+        <button (click)="goBack()">Back</button>
     </div>
-</main>
+</div>
+<!--<div *ngIf="selectedProduct">-->
+    <!--<h2>-->
+    <!--{{selectedProduct.name | uppercase}} is my product-->
+    <!--</h2>-->
+    <!--<button (click)="gotoRroduct()">View Details</button>-->
+<!--</div>-->

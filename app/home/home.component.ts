@@ -1,4 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { Product } from '../shared/models/product';
 import { ProductService } from '../shared/services/product.service';
 
@@ -15,7 +17,9 @@ export class HomeComponent implements OnInit{
     products: Product[];
     selectedProduct: Product;
 
-    constructor(private productService: ProductService) { }
+    constructor(
+        private router: Router,
+        private productService: ProductService) { }
 
     getProducts(): void {
         this.productService.getProducts().then(products => this.products = products);
@@ -27,6 +31,11 @@ export class HomeComponent implements OnInit{
     onSelect(product: Product): void {
         this.selectedProduct = product;
     }
+
+    gotoProduct(product: Product): void {
+        this.router.navigate(['/product', this.selectedProduct.id]);
+    }
+
 }
 
 

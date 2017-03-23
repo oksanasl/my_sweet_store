@@ -13,8 +13,8 @@ var appRoutes = [
 //     imports: [ RouterModule.forRoot(appRoutes) ],
 //     exports: [ RouterModule ]
 // })
-exports.appRouting = router_1.RouterModule.forRoot(appRoutes);
+exports.AppRoutingModule = router_1.RouterModule.forRoot(appRoutes);
 /**
  * Created by Окси on 09.03.2017.
  */
-//# sourceMappingURL=app.routing.js.map
+//# sourceMappingURL=app-routing.module.js.map

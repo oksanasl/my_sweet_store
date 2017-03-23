@@ -1,4 +1,9 @@
-import { Component, Input } from '@angular/core';
+import 'rxjs/add/operator/switchMap';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
+
+import { ProductService } from '../shared/services/product.service';
 import { Product } from '../shared/models/product';
 
 
@@ -10,9 +15,29 @@ import { Product } from '../shared/models/product';
 
 
 export class ProductComponent {
-    @Input()
-    product: Product;
+    // @Input()
+    product: Product[] = product;
+
+    constructor(
+        private productService: ProductService,
+        private route: ActivatedRoute,
+        private location: Location
+    ) {}
+
+    ngOnInit(): void {
+        this.route.params
+            .switchMap((params: Params) => this.productService.getProduct(+params['id']))
+            .subscribe(product => this.product = product);
+    }
+
+    goBack(): void {
+        this.location.back();
+    }
 }
+
+
+
+
 
 /**
  * Created by Окси on 08.03.2017.
