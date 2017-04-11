@@ -14,13 +14,12 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var common_1 = require("@angular/common");
 var product_service_1 = require("../shared/services/product.service");
+var product_1 = require("../shared/models/product");
 var ProductComponent = (function () {
     function ProductComponent(productService, route, location) {
         this.productService = productService;
         this.route = route;
         this.location = location;
-        // @Input()
-        this.product = product;
     }
     ProductComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -33,6 +32,10 @@ var ProductComponent = (function () {
     };
     return ProductComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", product_1.Product)
+], ProductComponent.prototype, "product", void 0);
 ProductComponent = __decorate([
     core_1.Component({
         selector: 'product-detail',

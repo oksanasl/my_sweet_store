@@ -1,15 +1,19 @@
-<div *ngIf="selectedProduct">
-    <div class="col-sm-4" *ngFor="let product of products">
-        <h2>{{selectedProduct.name}}</h2>
-        <div><label>id: </label> {{selectedProduct.id}}</div>
-        <div><label>name: </label> {{selectedProduct.name}}</div>
-
-        <button (click)="goBack()">Back</button>
+<div *ngIf="product" class="col-sm-12">
+    <!--<div class="col-sm-4" *ngFor="let product of products">-->
+    <div class="row">
+        <div class="col-sm-5">
+            <img [src]="product.image" class="img-responsive img-circle">
+        </div>
+        <div class="col-sm-7 about">
+            <h1>{{product.name}}</h1>
+            <dl class="dl-horizontal">
+                <dt>Description</dt>
+                <dd class="description">{{product.description}}</dd>
+                <dt>Price</dt>
+                <dd class="price">{{product.price | currency:'UAH': true}}</dd>
+            </dl>
+        </div>
     </div>
+        <button (click)="goBack()" class="btn">Back</button>
+    <!--</div>-->
 </div>
-<!--<div *ngIf="selectedProduct">-->
-    <!--<h2>-->
-    <!--{{selectedProduct.name | uppercase}} is my product-->
-    <!--</h2>-->
-    <!--<button (click)="gotoRroduct()">View Details</button>-->
-<!--</div>-->

@@ -6,18 +6,18 @@ import { ProductComponent } from './product/product.component';
 import { CustomComponent } from './custom/custom.component';
 
 
-const appRoutes: Routes = [
+const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'product/:id', component: ProductComponent },
     { path: 'custom', component: CustomComponent }
 ];
 
-// @NgModule({
-//     imports: [ RouterModule.forRoot(appRoutes) ],
-//     exports: [ RouterModule ]
-// })
+@NgModule({
+    imports: [ RouterModule.forRoot(routes) ],
+    exports: [ RouterModule ]
+})
 
-export const AppRoutingModule: ModuleWithProviders = RouterModule.forRoot(appRoutes);
+export class AppRoutingModule {}
 
 
 /**

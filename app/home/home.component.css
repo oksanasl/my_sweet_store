@@ -1,11 +1,9 @@
 h1 {
-    color: #369;
-    font-family: Arial, Helvetica, sans-serif;
+    color: #444;
     font-size: 250%;
 }
 h2, h3 {
     color: #444;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
 }
 body {
@@ -13,7 +11,6 @@ body {
 }
 body, input[text], button {
     color: #888;
-    font-family: Cambria, Georgia;
 }
 a {
     cursor: pointer;
@@ -37,28 +34,6 @@ button:disabled {
     cursor: auto;
 }
 
-/* Navigation link styles */
-nav a {
-    padding: 5px 10px;
-    text-decoration: none;
-    margin-right: 10px;
-    margin-top: 10px;
-    display: inline-block;
-    background-color: #eee;
-    border-radius: 4px;
-}
-nav a:visited, a:link {
-    color: #607D8B;
-}
-nav a:hover {
-    color: #039be5;
-    background-color: #CFD8DC;
-}
-nav a.active {
-    color: #039be5;
-}
-
-/* items class */
 .items {
     margin: 0 0 2em 0;
     list-style-type: none;
@@ -105,10 +80,6 @@ nav a.active {
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
 }
-/* everywhere else */
-* {
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 .selected {
     background-color: #CFD8DC !important;
@@ -118,9 +89,8 @@ nav a.active {
     margin: 0 0 2em 0;
     list-style-type: none;
     padding: 0;
-    width: 15em;
 }
-.products li {
+.products .item {
     cursor: pointer;
     position: relative;
     left: 0;
@@ -130,14 +100,26 @@ nav a.active {
     height: 1.6em;
     border-radius: 4px;
 }
-.products li.selected:hover {
+.products .list-product .selected:hover {
     background-color: #BBD8DC !important;
     color: white;
 }
-.products li:hover {
-    color: #607D8B;
-    background-color: #DDD;
-    left: .1em;
+.list-product:hover {
+    /*color: #607D8B;*/
+    /*background-color: #DDD;*/
+    /*left: .1em;*/
+}
+.list-product {
+    /*background: #f3f3f3;*/
+    border-radius: 4px;
+    padding: 30px;
+    text-align: center;
+}
+.list-product img:hover  {
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+    /*max-width: 50%;*/
+    /*margin: 15px auto;*/
 }
 .products .text {
     position: relative;

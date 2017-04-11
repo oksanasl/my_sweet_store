@@ -14,9 +14,8 @@ import { Product } from '../shared/models/product';
 })
 
 
-export class ProductComponent {
-    // @Input()
-    product: Product[] = product;
+export class ProductComponent implements OnInit{
+    @Input() product: Product;
 
     constructor(
         private productService: ProductService,

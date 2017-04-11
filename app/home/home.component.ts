@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit{
         this.selectedProduct = product;
     }
 
-    gotoProduct(product: Product): void {
+    gotoProduct(product): void {
         this.router.navigate(['/product', this.selectedProduct.id]);
     }
 
