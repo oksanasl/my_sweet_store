@@ -16,16 +16,27 @@ var common_1 = require("@angular/common");
 var product_service_1 = require("../shared/services/product.service");
 var product_1 = require("../shared/models/product");
 var ProductComponent = (function () {
-    function ProductComponent(productService, route, location) {
+    function ProductComponent(productService, route, location, router) {
         this.productService = productService;
         this.route = route;
         this.location = location;
+        this.router = router;
     }
+    // ngOnInit(): void {
+    //     this.route.params
+    //         .switchMap((params: Params) => this.productService.getProduct(+params['id']))
+    //         .subscribe(product => this.product = product);
+    // }
+    // ngOnInit(){
+    //     //grab the current product
+    //     let id = this.route.snapshot.params['id'];
+    //
+    //     this.productService.getProduct(+['id']).then(product => this.product = product);
+    // }
     ProductComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.route.params
-            .switchMap(function (params) { return _this.productService.getProduct(+params['id']); })
-            .subscribe(function (product) { return _this.product = product; });
+        var id = this.route.snapshot.params['id'];
+        this.productService.getProduct(+['id']).then(function (product) { return _this.product = product; });
     };
     ProductComponent.prototype.goBack = function () {
         this.location.back();
@@ -44,7 +55,8 @@ ProductComponent = __decorate([
     }),
     __metadata("design:paramtypes", [product_service_1.ProductService,
         router_1.ActivatedRoute,
-        common_1.Location])
+        common_1.Location,
+        router_1.Router])
 ], ProductComponent);
 exports.ProductComponent = ProductComponent;
 /**

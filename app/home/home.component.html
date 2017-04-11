@@ -2,14 +2,17 @@
     <h1 class="text-center text-uppercase">{{title}}</h1>
     <div class="row products">
         <div class="col-sm-3 list-product" *ngFor="let product of products"
-             [class.selected]="product === selectedProduct"
-             (click)="gotoProduct(product)">
-             <!--<div class="" >-->
-                 <!--[routerLink]="['/product', product.id]">-->
-            <img [src]="product.image" class="img-responsive img-circle">
-            <h4>{{product.name}}</h4>
+             [class.selected]="product === selectedProduct">
+             <div class="product-card"
+                  [routerLink]="['/product', product.id]">
+                  <!--(click)="gotoProduct(product)">-->
+                <img [src]="product.image" class="img-responsive img-circle">
+                <h4>{{product.name}}</h4>
+             </div>
         </div>
         </div>
+
+    <!--<router-outlet></router-outlet>-->
     <!--<product-detail [product]="selectedProduct"></product-detail>-->
     <!--<div *ngIf="selectedProduct">-->
         <!--<h2>-->
@@ -17,10 +20,4 @@
         <!--</h2>-->
         <!--<button (click)="gotoProduct()">View Details</button>-->
     <!--</div>-->
-    <div *ngIf="selectedProduct">
-       <h2>{{product.name}}</h2>
-        <div><label>id: </label> {{selectedProduct.id}}</div>
-        <div><label>name: </label> {{product.name}}</div>
-        <button (click)="gotoProduct()" class="btn">View Details</button>
-    </div>
 </main>

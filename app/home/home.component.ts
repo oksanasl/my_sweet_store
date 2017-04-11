@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit{
     onSelect(product: Product): void {
         this.selectedProduct = product;
     }
-
+    //
     gotoProduct(product): void {
         this.router.navigate(['/product', this.selectedProduct.id]);
     }

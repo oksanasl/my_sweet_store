@@ -1,6 +1,6 @@
 import 'rxjs/add/operator/switchMap';
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Router, Params } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { ProductService } from '../shared/services/product.service';
@@ -20,13 +20,28 @@ export class ProductComponent implements OnInit{
     constructor(
         private productService: ProductService,
         private route: ActivatedRoute,
-        private location: Location
+        private location: Location,
+        private router: Router
     ) {}
 
-    ngOnInit(): void {
-        this.route.params
-            .switchMap((params: Params) => this.productService.getProduct(+params['id']))
-            .subscribe(product => this.product = product);
+    // ngOnInit(): void {
+    //     this.route.params
+    //         .switchMap((params: Params) => this.productService.getProduct(+params['id']))
+    //         .subscribe(product => this.product = product);
+    // }
+
+    // ngOnInit(){
+    //     //grab the current product
+    //     let id = this.route.snapshot.params['id'];
+    //
+    //     this.productService.getProduct(+['id']).then(product => this.product = product);
+    // }
+
+    ngOnInit(){
+
+        let id = this.route.snapshot.params['id'];
+
+        this.productService.getProduct(+['id']).then(product => this.product = product);
     }
 
     goBack(): void {

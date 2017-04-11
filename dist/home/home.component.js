@@ -28,6 +28,7 @@ var HomeComponent = (function () {
     HomeComponent.prototype.onSelect = function (product) {
         this.selectedProduct = product;
     };
+    //
     HomeComponent.prototype.gotoProduct = function (product) {
         this.router.navigate(['/product', this.selectedProduct.id]);
     };
