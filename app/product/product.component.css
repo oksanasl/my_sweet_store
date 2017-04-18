@@ -2,9 +2,14 @@
     margin-top: 20px;
 }
 dl{
-    margin-top: 50px;
+    margin-top: 90px;
     font-size: 18px;
 }
 dt, dd{
     margin-bottom: 30px;
+    /*text-align: left;*/
+    /*display: inline-block;*/
+}
+.btn{
+    margin-top: 15px;
 }

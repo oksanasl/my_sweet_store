@@ -30,20 +30,6 @@ var ProductComponent = (function () {
         })
             .subscribe(function (product) { return _this.product = product; });
     };
-    // ngOnInit(){
-    //     //grab the current product
-    //     let id = this.route.snapshot.params['id'];
-    //
-    //     this.productService.getProduct(+['id']).then(product =>
-    // this.product = product);
-    // }
-    // ngOnInit(){
-    //
-    //     let id = this.route.snapshot.params['id'];
-    //
-    //     this.productService.getProduct(+['id']).then(product =>
-    //         this.product = product);
-    // }
     ProductComponent.prototype.goBack = function () {
         this.location.back();
     };

@@ -18,7 +18,7 @@ exports.PRODUCTS = [
     {
         id: 3,
         name: 'Pear',
-        image: 'app/shared/images/pear1.jpg',
+        image: 'app/shared/images/pear2.jpg',
         description: 'Pears are high in fiber, as well as substantial amounts of potassium, vitamin C, and phytochemicals (the latter of which helps to prevent disease). Riegel (2006) reports that a 100-gram portion of pear fulfills about 9 percent of the recommended daily allowance of vitamin C. Pears are the least allergenic of all fruits. Along with lamb and soya formula, pears form part of the strictest exclusion diet for allergy sufferers.',
         price: 50
     },
@@ -60,7 +60,7 @@ exports.PRODUCTS = [
     {
         id: 9,
         name: 'Persimmon',
-        image: 'app/shared/images/persimmon.jpg',
+        image: 'app/shared/images/persimmon2.jpg',
         description: 'The raw fruit is used to treat constipation and hemorrhoids, and to stop bleeding. As such, it is not a good idea to consume too many persimmons at once—they can induce diarrhea. On the other hand, the cooked fruit is used to treat diarrhea and dysentery. The fruits of some persimmon varieties contain the tannins catechin and gallocatechin, as well as the anti-tumor compounds betulinic acid and shibuol, although the latter may also cause gastrointestinal problems. It is often advised that persimmons should not be eaten with crab meat nor on an empty stomach.',
         price: 110
     }
