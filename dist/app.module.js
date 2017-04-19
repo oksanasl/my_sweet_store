@@ -14,6 +14,7 @@ var app_component_1 = require("./app.component");
 var home_component_1 = require("./home/home.component");
 var product_component_1 = require("./product/product.component");
 var custom_component_1 = require("./custom/custom.component");
+var list_add_component_1 = require("./home/list-add.component");
 var product_service_1 = require("./shared/services/product.service");
 var app_routing_module_1 = require("./app-routing.module");
 var AppModule = (function () {
@@ -33,7 +34,8 @@ AppModule = __decorate([
             app_component_1.AppComponent,
             home_component_1.HomeComponent,
             product_component_1.ProductComponent,
-            custom_component_1.CustomComponent
+            custom_component_1.CustomComponent,
+            list_add_component_1.ListAddComponent
         ],
         providers: [product_service_1.ProductService],
         bootstrap: [app_component_1.AppComponent]
