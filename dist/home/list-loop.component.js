@@ -10,23 +10,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var ListAddComponent = (function () {
-    function ListAddComponent() {
+var ListLoopComponent = (function () {
+    function ListLoopComponent() {
     }
-    ListAddComponent.prototype.ngOnInit = function () {
+    ListLoopComponent.prototype.ngOnInit = function () {
     };
-    return ListAddComponent;
+    return ListLoopComponent;
 }());
-ListAddComponent = __decorate([
+ListLoopComponent = __decorate([
     core_1.Component({
-        selector: 'list-add',
-        templateUrl: '../../app/shopping-bag/list-add.component.html',
-        styleUrls: ['../../app/shopping-bag/list-add.component.css']
+        selector: 'list-loop',
+        templateUrl: '../../app/shopping-bag/list-loop.component.html',
+        styleUrls: ['../../app/shopping-bag/list-loop.component.css']
     }),
     __metadata("design:paramtypes", [])
-], ListAddComponent);
-exports.ListAddComponent = ListAddComponent;
+], ListLoopComponent);
+exports.ListLoopComponent = ListLoopComponent;
 /**
- * Created by Окси on 19.04.2017.
+ * Created by Окси on 20.04.2017.
  */
-//# sourceMappingURL=list-add.component.js.map
+//# sourceMappingURL=list-loop.component.js.map

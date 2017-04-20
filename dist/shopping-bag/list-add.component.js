@@ -20,8 +20,8 @@ var ListAddComponent = (function () {
 ListAddComponent = __decorate([
     core_1.Component({
         selector: 'list-add',
-        templateUrl: '../../app/shopping-bag/list-add.component.html',
-        styleUrls: ['../../app/shopping-bag/list-add.component.css']
+        templateUrl: 'app/shopping-bag/list-add.component.html',
+        styleUrls: ['app/shopping-bag/list-add.component.css']
     }),
     __metadata("design:paramtypes", [])
 ], ListAddComponent);

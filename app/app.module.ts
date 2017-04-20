@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { CustomComponent } from './custom/custom.component';
-import { ListAddComponent } from "./home/list-add.component";
+import { ListLoopComponent } from "./shopping-bag/list-loop.component";
+import { ListAddComponent } from "./shopping-bag/list-add.component";
 import { ProductService } from "./shared/services/product.service";
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,7 +26,8 @@ import { AppRoutingModule } from './app-routing.module';
         HomeComponent,
         ProductComponent,
         CustomComponent,
-        ListAddComponent
+        ListAddComponent,
+        ListLoopComponent
     ],
     providers: [ ProductService ],
     bootstrap: [ AppComponent ]
