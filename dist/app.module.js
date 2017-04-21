@@ -6,6 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+///<reference path="dropdown.directive.ts"/>
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
@@ -18,6 +19,7 @@ var list_loop_component_1 = require("./shopping-bag/list-loop.component");
 var list_add_component_1 = require("./shopping-bag/list-add.component");
 var product_service_1 = require("./shared/services/product.service");
 var app_routing_module_1 = require("./app-routing.module");
+var dropdown_directive_1 = require("./dropdown.directive");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -37,7 +39,8 @@ AppModule = __decorate([
             product_component_1.ProductComponent,
             custom_component_1.CustomComponent,
             list_add_component_1.ListAddComponent,
-            list_loop_component_1.ListLoopComponent
+            list_loop_component_1.ListLoopComponent,
+            dropdown_directive_1.DropdownDirective
         ],
         providers: [product_service_1.ProductService],
         bootstrap: [app_component_1.AppComponent]

@@ -1,3 +1,4 @@
+///<reference path="dropdown.directive.ts"/>
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -12,6 +13,7 @@ import { ListAddComponent } from "./shopping-bag/list-add.component";
 import { ProductService } from "./shared/services/product.service";
 
 import { AppRoutingModule } from './app-routing.module';
+import { DropdownDirective } from "./dropdown.directive";
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import { AppRoutingModule } from './app-routing.module';
         ProductComponent,
         CustomComponent,
         ListAddComponent,
-        ListLoopComponent
+        ListLoopComponent,
+        DropdownDirective
     ],
     providers: [ ProductService ],
     bootstrap: [ AppComponent ]
