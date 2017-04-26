@@ -14,6 +14,7 @@ import { ProductService } from "./shared/services/product.service";
 
 import { AppRoutingModule } from './app-routing.module';
 import { DropdownDirective } from "./dropdown.directive";
+import { ShoppingBagService } from "./shopping-bag/shopping-bag.service";
 
 
 @NgModule({
@@ -32,7 +33,9 @@ import { DropdownDirective } from "./dropdown.directive";
         ListLoopComponent,
         DropdownDirective
     ],
-    providers: [ ProductService ],
+    providers: [ ProductService,
+                ShoppingBagService
+    ],
     bootstrap: [ AppComponent ]
 })
 export class AppModule {}

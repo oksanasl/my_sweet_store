@@ -1,8 +1,9 @@
 <div class="row">
     <div class="col-xs-10">
+        <list-add></list-add>
         <hr>
         <ul class="list-group">
-            <a class="list-group-item" style="cursor: pointer" *ngFor="let product of products"></a>
+            <a class="list-group-item" style="cursor: pointer" *ngFor="let product of products">{{product.name}} {{product.price}}</a>
         </ul>
     </div>
 </div>

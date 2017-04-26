@@ -10,10 +10,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var shopping_bag_service_1 = require("./shopping-bag.service");
 var ListLoopComponent = (function () {
-    function ListLoopComponent() {
+    function ListLoopComponent(shoppingBagService) {
+        this.shoppingBagService = shoppingBagService;
+        this.products = [];
     }
     ListLoopComponent.prototype.ngOnInit = function () {
+        this.products = this.shoppingBagService.getItems();
     };
     return ListLoopComponent;
 }());
@@ -23,7 +27,7 @@ ListLoopComponent = __decorate([
         templateUrl: 'app/shopping-bag/list-loop.component.html',
         styleUrls: ['app/shopping-bag/list-loop.component.css']
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [shopping_bag_service_1.ShoppingBagService])
 ], ListLoopComponent);
 exports.ListLoopComponent = ListLoopComponent;
 /**

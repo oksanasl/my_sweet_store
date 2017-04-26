@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Product} from "../shared/models/product";
+
+import { ListAddComponent } from 'app/shopping-bag/list-add.component';
+import { Product } from "../shared/models/product";
+import { ShoppingBagService } from './shopping-bag.service';
 
 @Component({
     selector: 'list-loop',
@@ -7,11 +10,12 @@ import {Product} from "../shared/models/product";
     styleUrls: ['app/shopping-bag/list-loop.component.css']
 })
 export class ListLoopComponent implements OnInit {
-    products: Product[];
+    products: Product[] = [];
 
-    constructor() {}
+    constructor(private shoppingBagService: ShoppingBagService) {}
 
     ngOnInit() {
+        this.products = this.shoppingBagService.getItems();
     }
 
 }

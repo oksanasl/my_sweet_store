@@ -20,6 +20,7 @@ var list_add_component_1 = require("./shopping-bag/list-add.component");
 var product_service_1 = require("./shared/services/product.service");
 var app_routing_module_1 = require("./app-routing.module");
 var dropdown_directive_1 = require("./dropdown.directive");
+var shopping_bag_service_1 = require("./shopping-bag/shopping-bag.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -42,7 +43,9 @@ AppModule = __decorate([
             list_loop_component_1.ListLoopComponent,
             dropdown_directive_1.DropdownDirective
         ],
-        providers: [product_service_1.ProductService],
+        providers: [product_service_1.ProductService,
+            shopping_bag_service_1.ShoppingBagService
+        ],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

@@ -15,9 +15,12 @@ var router_1 = require("@angular/router");
 var common_1 = require("@angular/common");
 var product_service_1 = require("../shared/services/product.service");
 var product_1 = require("../shared/models/product");
+var shopping_bag_service_1 = require("../shopping-bag/shopping-bag.service");
 var ProductComponent = (function () {
-    function ProductComponent(productService, route, location, router) {
+    // recentProduct: Product = product;
+    function ProductComponent(productService, shoppingBagService, route, location, router) {
         this.productService = productService;
+        this.shoppingBagService = shoppingBagService;
         this.route = route;
         this.location = location;
         this.router = router;
@@ -33,6 +36,9 @@ var ProductComponent = (function () {
     ProductComponent.prototype.goBack = function () {
         this.location.back();
     };
+    ProductComponent.prototype.onAddToShoppingBag = function () {
+        this.shoppingBagService.addItems(this.product);
+    };
     return ProductComponent;
 }());
 __decorate([
@@ -46,6 +52,7 @@ ProductComponent = __decorate([
         styleUrls: ['./app/product/product.component.css']
     }),
     __metadata("design:paramtypes", [product_service_1.ProductService,
+        shopping_bag_service_1.ShoppingBagService,
         router_1.ActivatedRoute,
         common_1.Location,
         router_1.Router])

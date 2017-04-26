@@ -5,6 +5,7 @@ import { Location } from '@angular/common';
 
 import { ProductService } from '../shared/services/product.service';
 import { Product } from '../shared/models/product';
+import { ShoppingBagService } from "../shopping-bag/shopping-bag.service";
 
 
 @Component({
@@ -16,9 +17,11 @@ import { Product } from '../shared/models/product';
 
 export class ProductComponent implements OnInit{
     @Input() product: Product;
+    // recentProduct: Product = product;
 
     constructor(
         private productService: ProductService,
+        private shoppingBagService: ShoppingBagService,
         private route: ActivatedRoute,
         private location: Location,
         private router: Router
@@ -33,6 +36,10 @@ export class ProductComponent implements OnInit{
 
     goBack(): void {
         this.location.back();
+    }
+
+    onAddToShoppingBag(){
+        this.shoppingBagService.addItems(this.product);
     }
 }
 
