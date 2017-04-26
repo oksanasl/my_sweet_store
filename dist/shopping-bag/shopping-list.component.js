@@ -10,23 +10,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var ListLoopComponent = (function () {
-    function ListLoopComponent() {
+var shopping_bag_service_1 = require("./shopping-bag.service");
+var ShoppingListComponent = (function () {
+    function ShoppingListComponent(shoppingBagService) {
+        this.shoppingBagService = shoppingBagService;
     }
-    ListLoopComponent.prototype.ngOnInit = function () {
+    ShoppingListComponent.prototype.ngOnInit = function () {
+        this.items = this.shoppingBagService.getItems();
     };
-    return ListLoopComponent;
+    return ShoppingListComponent;
 }());
-ListLoopComponent = __decorate([
+ShoppingListComponent = __decorate([
     core_1.Component({
-        selector: 'list-loop',
-        templateUrl: '../../app/shopping-bag/shopping-list.component.html',
-        styleUrls: ['../../app/shopping-bag/shopping-list.component.css']
+        selector: 'shopping-list',
+        templateUrl: 'app/shopping-bag/shopping-list.component.html',
+        styleUrls: ['app/shopping-bag/shopping-list.component.css']
     }),
-    __metadata("design:paramtypes", [])
-], ListLoopComponent);
-exports.ListLoopComponent = ListLoopComponent;
+    __metadata("design:paramtypes", [shopping_bag_service_1.ShoppingBagService])
+], ShoppingListComponent);
+exports.ShoppingListComponent = ShoppingListComponent;
 /**
  * Created by Окси on 20.04.2017.
  */
-//# sourceMappingURL=list-loop.component.js.map
+//# sourceMappingURL=shopping-list.component.js.map

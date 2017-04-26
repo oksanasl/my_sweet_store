@@ -24,8 +24,8 @@ var ListLoopComponent = (function () {
 ListLoopComponent = __decorate([
     core_1.Component({
         selector: 'list-loop',
-        templateUrl: 'app/shopping-bag/list-loop.component.html',
-        styleUrls: ['app/shopping-bag/list-loop.component.css']
+        templateUrl: '../../app/shopping-bag/shopping-list.component.html',
+        styleUrls: ['../../app/shopping-bag/shopping-list.component.css']
     }),
     __metadata("design:paramtypes", [shopping_bag_service_1.ShoppingBagService])
 ], ListLoopComponent);

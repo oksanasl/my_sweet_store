@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { CustomComponent } from './custom/custom.component';
-import { ListLoopComponent } from "./shopping-bag/list-loop.component";
+import { ShoppingListComponent } from "./shopping-bag/shopping-list.component";
 import { ListAddComponent } from "./shopping-bag/list-add.component";
 import { ProductService } from "./shared/services/product.service";
 
@@ -30,7 +30,7 @@ import { ShoppingBagService } from "./shopping-bag/shopping-bag.service";
         ProductComponent,
         CustomComponent,
         ListAddComponent,
-        ListLoopComponent,
+        ShoppingListComponent,
         DropdownDirective
     ],
     providers: [ ProductService,

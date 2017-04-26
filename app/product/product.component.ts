@@ -19,6 +19,8 @@ export class ProductComponent implements OnInit{
     @Input() product: Product;
     // recentProduct: Product = product;
 
+    public shoppingbag = [];
+
     constructor(
         private productService: ProductService,
         private shoppingBagService: ShoppingBagService,

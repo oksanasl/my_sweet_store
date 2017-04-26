@@ -17,13 +17,14 @@ var product_service_1 = require("../shared/services/product.service");
 var product_1 = require("../shared/models/product");
 var shopping_bag_service_1 = require("../shopping-bag/shopping-bag.service");
 var ProductComponent = (function () {
-    // recentProduct: Product = product;
     function ProductComponent(productService, shoppingBagService, route, location, router) {
         this.productService = productService;
         this.shoppingBagService = shoppingBagService;
         this.route = route;
         this.location = location;
         this.router = router;
+        // recentProduct: Product = product;
+        this.shoppingbag = [];
     }
     ProductComponent.prototype.ngOnInit = function () {
         var _this = this;

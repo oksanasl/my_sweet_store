@@ -2,19 +2,16 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var ShoppingBagService = (function () {
     function ShoppingBagService() {
+        this.shoppingbag = [];
     }
     ShoppingBagService.prototype.getItems = function () {
         return this.product;
         // to display on the shopping list
     };
     ShoppingBagService.prototype.addItems = function (product) {
-        Array.prototype.push.apply(this.product, product);
-        // to add multiple items to an array
-        // takes an array of ingredients and adds it to the list
-        // apply this push method available on each array object
-        // to all the items (this.items)
-        // ( , items) pass to the addItems method & push them individually
-        // on this.items property of the shopping list
+        this.product = product;
+        this.shoppingbag.push(product);
+        alert(product.name + ' was added to shopping bag');
     };
     return ShoppingBagService;
 }());
