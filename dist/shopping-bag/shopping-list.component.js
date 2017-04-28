@@ -16,7 +16,7 @@ var ShoppingListComponent = (function () {
         this.shoppingBagService = shoppingBagService;
     }
     ShoppingListComponent.prototype.ngOnInit = function () {
-        this.items = this.shoppingBagService.getItems();
+        this.item = this.shoppingBagService.getItems();
     };
     return ShoppingListComponent;
 }());

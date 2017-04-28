@@ -7,7 +7,8 @@
         <div class="col-sm-7 about">
             <h1 class="col-sm-6">{{product.name}}</h1>
             <div class="col-sm-6 edit-buttons pull-right">
-                <button class="btn btn-success" (click)="onAddToShoppingBag()">To Shopping List</button>
+                <button class="btn btn-success" [class.bagItem]="product === item"
+                        (click)="onAddToShoppingBag()">To Shopping Bag</button>
                 <button class="btn btn-primary">Edit</button>
                 <button class="btn btn-danger">Delete</button>
             </div>
@@ -23,14 +24,6 @@
             </dl>
         </div>
     </div>
-    <!--</div>-->
 </div>
-<shopping-list></shopping-list>
-<!--<div class="row">-->
-    <!--<div class="col-xs-12">-->
-        <!--<ul class="list-group">-->
-            <!--<li class="list-group-item" *ngFor="let product of product">{{product.name}} ({{product.price}})</li>-->
-        <!--</ul>-->
-    <!--</div>-->
-<!--</div>-->
+
 

@@ -9,13 +9,12 @@ import { ShoppingBagService } from './shopping-bag.service';
     styleUrls: ['app/shopping-bag/shopping-list.component.css']
 })
 export class ShoppingListComponent implements OnInit {
-
-    items: Product[];
+    item: Product[];
 
     constructor(private shoppingBagService: ShoppingBagService) {}
 
     ngOnInit() {
-        this.items = this.shoppingBagService.getItems();
+        this.item = this.shoppingBagService.getItems();
     }
 
 }

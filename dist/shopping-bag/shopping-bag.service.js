@@ -8,10 +8,10 @@ var ShoppingBagService = (function () {
         return this.product;
         // to display on the shopping list
     };
-    ShoppingBagService.prototype.addItems = function (product) {
-        this.product = product;
-        this.shoppingbag.push(product);
-        alert(product.name + ' was added to shopping bag');
+    ShoppingBagService.prototype.addItems = function (item) {
+        this.product = item;
+        this.shoppingbag.push(item);
+        alert(item.name + ' was added to shopping bag');
     };
     return ShoppingBagService;
 }());

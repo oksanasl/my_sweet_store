@@ -2,20 +2,21 @@ import { Product } from "../shared/models/product";
 
 export class ShoppingBagService {
     private product: Product[];
-    public shoppingbag = [];
+    item: Product[];
+
+    shoppingbag = [];
 
     constructor() {}
 
     getItems() {
         return this.product;
-
         // to display on the shopping list
     }
 
-    addItems(product) {
-        this.product = product;
-        this.shoppingbag.push(product);
-        alert(product.name + ' was added to shopping bag');
+    addItems(item) {
+        this.product = item;
+        this.shoppingbag.push(item);
+        alert(item.name + ' was added to shopping bag');
     }
 
 
