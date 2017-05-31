@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var shopping_bag_service_1 = require("./shopping-bag.service");
+var shopping_bag_service_1 = require("../shared/services/shopping-bag.service");
 var ShoppingListComponent = (function () {
     function ShoppingListComponent(shoppingBagService) {
         this.shoppingBagService = shoppingBagService;

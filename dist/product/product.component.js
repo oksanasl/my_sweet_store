@@ -15,7 +15,7 @@ var router_1 = require("@angular/router");
 var common_1 = require("@angular/common");
 var product_service_1 = require("../shared/services/product.service");
 var product_1 = require("../shared/models/product");
-var shopping_bag_service_1 = require("../shopping-bag/shopping-bag.service");
+var shopping_bag_service_1 = require("../shared/services/shopping-bag.service");
 var ProductComponent = (function () {
     function ProductComponent(productService, shoppingBagService, route, location, router) {
         this.productService = productService;

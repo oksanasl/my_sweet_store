@@ -5,7 +5,7 @@ import { Location } from '@angular/common';
 
 import { ProductService } from '../shared/services/product.service';
 import { Product } from '../shared/models/product';
-import { ShoppingBagService } from "../shopping-bag/shopping-bag.service";
+import { ShoppingBagService } from "../shared/services/shopping-bag.service";
 
 
 @Component({
