@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b4e4a96-2fb4-45fa-b89e-44642098d0ee" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/shopping-bag/shopping-bag.service.ts" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.module.ts" afterPath="$PROJECT_DIR$/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/product/product.component.ts" afterPath="$PROJECT_DIR$/app/product/product.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/shopping-bag/shopping-list.component.ts" afterPath="$PROJECT_DIR$/app/shopping-bag/shopping-list.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/app.module.js" afterPath="$PROJECT_DIR$/dist/app.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/app.module.js.map" afterPath="$PROJECT_DIR$/dist/app.module.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/product/product.component.js" afterPath="$PROJECT_DIR$/dist/product/product.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/product/product.component.js.map" afterPath="$PROJECT_DIR$/dist/product/product.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/shopping-bag/shopping-list.component.js" afterPath="$PROJECT_DIR$/dist/shopping-bag/shopping-list.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/shopping-bag/shopping-list.component.js.map" afterPath="$PROJECT_DIR$/dist/shopping-bag/shopping-list.component.js.map" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -76,8 +65,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="12" />
+            <state relative-caret-position="17">
+              <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -418,12 +407,12 @@
       <workItem from="1493282163697" duration="10559000" />
       <workItem from="1493378572918" duration="7028000" />
       <workItem from="1495971593306" duration="2682000" />
-      <workItem from="1495998370544" duration="2553000" />
+      <workItem from="1495998370544" duration="3030000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="299536000" />
+    <option name="totallyTimeSpent" value="300013000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -838,8 +827,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="12" />
+        <state relative-caret-position="17">
+          <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
           <folding />
         </state>
       </provider>
